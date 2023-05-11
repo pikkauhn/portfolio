@@ -12,7 +12,7 @@ function App() {
       <div className="screen">
         <Header />
         <Routes>
-        <Route path="/portfolio" exact element={<AboutMe />} />
+        <Route path="/" exact element={<AboutMe />} />
         </Routes>
       </div>
       <Footer />
