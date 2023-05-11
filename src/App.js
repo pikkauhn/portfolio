@@ -8,16 +8,15 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <div>
       <div className="screen">
         <Header />
         <Routes>
           <Route path="/" exact element={<AboutMe />} />
         </Routes>
-
       </div>
       <Footer />
-    </Router>
+    </div>
   );
 }
 
