@@ -4,18 +4,18 @@ import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe/AboutMe';
 
 
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    // <Router>
+    <Router>
     <div>
       <div className="screen">
         <Header />
-        <AboutMe />
-        {/* <Routes> */}
-        {/* <Route path="/" exact element={<AboutMe />} /> */}
-        {/* </Routes> */}
+        {/* <AboutMe /> */}
+        <Routes>
+        <Route path="/" exact element={<AboutMe />} />
+        </Routes>
       </div>
       <Footer />
     </div>
