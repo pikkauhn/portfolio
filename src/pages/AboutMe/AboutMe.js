@@ -49,7 +49,7 @@ function AboutMe() {
             setTimeout(typing, delay);
           }
         };
-      }, [content]);
+      }, []);
 
     useEffect(() => {
         if (imgRef.current) {
