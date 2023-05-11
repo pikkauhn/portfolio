@@ -20,11 +20,11 @@ function AboutMe() {
             if (char === " ") {
               sound = new Audio(typingSound);
               sound.play();
-              detailsRef.current.innerHTML += " ";
+              document.getElementById("details").innerHTML += " ";
             } else if (char === "<") {
               sound = new Audio(typingSound);
               sound.play();
-              detailsRef.current.innerHTML += "<br>";
+             document.getElementById("details").innerHTML += "<br>";
             } else {
               const randomNum = Math.floor(Math.random() * 3) + 1;
               switch (randomNum) {
@@ -42,7 +42,7 @@ function AboutMe() {
                   break;
               }
               sound.play();
-              detailsRef.current.innerHTML += char;
+              document.getElementById("details").innerHTML += char;
             }
             i++;
             const delay = Math.random() * (100 - 30) + 30; // random delay between 10ms and 100ms
@@ -67,7 +67,7 @@ function AboutMe() {
                 <h1>About Me</h1>
                 <hr className="line1" />
                 <div>
-                    <p ref={detailsRef} />
+                    <p id="details" />
                 </div>
             </div>
         </div>
