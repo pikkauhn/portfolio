@@ -20,11 +20,11 @@ function AboutMe() {
             if (char === " ") {
               sound = new Audio(typingSound);
               sound.play();
-              document.getElementById("details").innerHTML += " ";
+              detailsRef.current.innerHTML += " ";
             } else if (char === "<") {
               sound = new Audio(typingSound);
               sound.play();
-             document.getElementById("details").innerHTML += "<br>";
+              detailsRef.current.innerHTML += "<br>";
             } else {
               const randomNum = Math.floor(Math.random() * 3) + 1;
               switch (randomNum) {
@@ -42,14 +42,15 @@ function AboutMe() {
                   break;
               }
               sound.play();
-              document.getElementById("details").innerHTML += char;
+              detailsRef.current.innerHTML += char;
             }
             i++;
             const delay = Math.random() * (100 - 30) + 30; // random delay between 10ms and 100ms
             setTimeout(typing, delay);
           }
         };
-      }, []);
+        typing();
+      }, [content]);
 
     useEffect(() => {
         if (imgRef.current) {
@@ -67,7 +68,7 @@ function AboutMe() {
                 <h1>About Me</h1>
                 <hr className="line1" />
                 <div>
-                    <p id="details" />
+                    <p ref={detailsRef} />
                 </div>
             </div>
         </div>
