@@ -10,6 +10,7 @@ function AboutMe() {
     const content = `Hello and thank you for visiting my portfolio! I'm Zachary Burns,<a recent Summa Cum Laude graduate of Capella University with a<Bachelor's degree in Software Development. During my time at Capella,<I consistently demonstrated a high level of skill and dedication to my<studies, earning recognition from both my professors and peers.<<I have experience working with Java, React, JavaScript,<Node.js, SQL, MySQL, and NoSQL (MongoDB), as well as various APIs.<I am currently learning Kotlin with Jetpack Compose, and I am<committed to continuing my education and professional development.<<Overall, I'm a driven and talented individual, and I'm looking forward to <making my mark in the world of software development.`;
     const detailsRef = useRef(null);
     const imgRef = useRef(null);
+    const volume = Math.random() * (.5 - .1) + .5;
 
     useEffect(() => {
         let i = 0;
@@ -19,8 +20,10 @@ function AboutMe() {
             const char = content.charAt(i);
             if (char === " ") {
               sound = new Audio(typingSound);
+              sound.volume= volume;
               sound.play();
               detailsRef.current.innerHTML += " ";
+              sound.volume= volume;
             } else if (char === "<") {
               sound = new Audio(typingSound);
               sound.play();
@@ -41,6 +44,7 @@ function AboutMe() {
                   sound = new Audio(charSound);
                   break;
               }
+              sound.volume= volume;
               sound.play();
               detailsRef.current.innerHTML += char;
             }
