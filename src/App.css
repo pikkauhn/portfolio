@@ -62,6 +62,13 @@ body {
   font-size: 32px;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  animation: colorPulse 5s infinite ease-in-out;
+}
+
+
 .Footer {
   position: fixed;
   bottom: 0;

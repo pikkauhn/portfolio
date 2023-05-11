@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Header() {
@@ -8,8 +9,8 @@ function Header() {
        Zachary Burns
        </div>
        <div className="right-text">
-        About Me
-        Experience
+        <Link to="/">About Me</Link>
+        <Link to="/Experience">Experience</Link>
         Theme
        </div>
     </div>
