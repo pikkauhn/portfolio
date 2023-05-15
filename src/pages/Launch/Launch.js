@@ -31,7 +31,7 @@ function Launch() {
         congratulations.play();
         setTimeout(() => {
             navigate('/aboutMe');
-        }, 3500);
+        }, 4000);
     };
 
     useEffect(() => {
