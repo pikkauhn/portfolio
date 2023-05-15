@@ -1,20 +1,31 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 
 function Header() {
-  return (
+  const location = useLocation();
+
+  const showHeader = location.pathname !== "/";
+
+  if (showHeader) {
+  return (    
     <div className="Header">
         <div className="left-text">
        Zachary Burns
        </div>
        <div className="right-text">
-        <Link to="/">About Me</Link>
-        <Link to="/Experience">Experience</Link>
-        Theme
-       </div>
+        <NavLink to="/aboutMe">About Me</NavLink>
+        <NavLink to="/Experience">Experience</NavLink>
+        {/* <NavLink>Theme</NavLink> */}
+       </div>     
     </div>
   )
+  }
+  else {
+    return (
+      null
+    )
+  }
 }
 
 export default Header

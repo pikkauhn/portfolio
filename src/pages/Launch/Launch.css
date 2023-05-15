@@ -1,0 +1,26 @@
+p {
+    word-wrap: break-word;
+}
+
+#launchButton {
+    margin-left: 45vw;
+    padding: 10px;
+    animation: bgPulse 8s infinite ease-in-out;
+}
+
+@keyframes bgPulse {
+    0%, 100% {
+        background: radial-gradient(ellipse, rgba(0, 255, 34, 0.178), transparent);
+    }
+    20% {
+        background-color: rgba(0, 255, 34, 0.26);
+    }
+    50% {
+        background-color: rgba(0, 102, 0, 0.171);
+    }
+    80% {
+        background-color: rgba(0, 102, 0, 0);
+    }    
+
+    
+}
