@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import loadHum from '../../assets/sounds/loadHum.wav';
-import { Link } from 'react-router-dom';
+import congrats from '../../assets/sounds/congrats.mp3';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 import './Launch.css'
 
@@ -10,45 +13,57 @@ function Launch() {
     const [showButton, setShowButton] = useState(false);
     const [start, setStart] = useState(false);
     const isMounted = useRef(true);
+    const navigate = useNavigate();
     let delay = 0;
     let content = "";
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const length = 2000;
+    const length = 1000;
     for (let i = 0; i < length; i++) {
         content += characters[Math.floor(Math.random() * characters.length)]
     };
     let typingInterval;
-    let hum = new Audio(loadHum);
+    const hum = new Audio(loadHum);
+    
+    const handleLink = () => {
+        hum.pause();
+        hum.currentTime = 0;
+        const congratulations = new Audio(congrats);
+        congratulations.play();
+        setTimeout(() => {
+            navigate('/aboutMe');
+        }, 3500);
+    };
 
     useEffect(() => {
-        if (start) {            
+
+        if (start) {
             hum.play();
-            const typeout = setTimeout(typing, 3000);
+            setTimeout(() => {typing()}, 3000);
         }
-    }, [start]);    
+        return () => {
+            hum.pause();
+            hum.currentTime = 0;
+        };
+    }, [start]);
 
     useEffect(() => {
-        if (loaded) {            
+        if (loaded) {
             setDetails("")
             delay = 80;
-            content = "LOADING SUCCESSFUL. . . . . . . . . .";
+            content = "LOAD SUCCESSFUL. . . . . . . . . . . . . .";
             typing();
         }
-    }, [loaded])
+    }, [loaded]);
 
     let i = 0;
     const typing = () => {
         if (i < content.length && isMounted.current) {
             const char = content.charAt(i);
-            if (char === " ") {
-                setDetails((prevText) => prevText + " ");
-            } else if (char === "<") {
-                setDetails((prevText) => prevText + "<br>");
-            } else {
-                if (typeof details != "undefined") {
-                    setDetails((prevText) => prevText + char);
-                }
+
+            if (typeof details != "undefined") {
+                setDetails((prevText) => prevText + char);
             }
+
             i++;
 
             if (i < content.length) {
@@ -71,12 +86,15 @@ function Launch() {
 
     }
 
-
     return (
         <div>
-            <button onClick={() => { setStart(true) }}>START</button>
+            {(!start) ? <Link onClick={() => { setStart(true) }}>START</Link> : null}
             {(start) ? <p>{details}</p> : null}
-            {(showButton) ? <Link to="/aboutMe" id="launchButton">LAUNCH!</Link> : null}
+            {(showButton) ?
+                <Link to="#" id="launchButton" onClick={handleLink}>
+                    LAUNCH!
+                </Link>
+                : null}
         </div>
     )
 }
