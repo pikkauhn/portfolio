@@ -1,0 +1,65 @@
+.expHeader {
+    margin: 5vh 2vw;
+    padding: 1rem 2rem;
+  }
+  
+  .expHeader a:link {
+    display: inline;
+    margin-right: 3vw;
+    font-size: 3rem;
+    padding: 1rem 1vw 1rem 0;
+    border-bottom: 2px solid #0f2;
+    border-right: 2px solid #0f2;
+  }
+  
+  .expHeader a:hover {
+    background-color: #060;
+  }
+  
+  .subTitle {
+    border-bottom: 0.2rem solid #0f2;
+    cursor: default;    
+  }
+
+  .subTitle > h2,
+  .subTitle > p {
+    display: inline;
+}
+  
+  .subTitle,
+  .items {
+    height: 5vh;
+    width: 12vw;
+    text-align: right;
+    margin-left: 6.5vw;
+    padding-right: 1vw;
+    border-right: 0.2rem solid #0f2;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: right;
+    border-bottom: 0.2rem solid #060;
+    padding: 1vh 1vw;
+  }
+  
+  .items:last-child:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+  
+  .items:hover {
+    background-color: #060;
+  }
+  
+  .detailsBlock {
+    text-align: left;
+    background-color: rgba(42, 171, 27, 0.21);
+    margin-left: 15vw;
+    width: 70vw;
+    padding: 2vh;
+    height: 36vh;
+    overflow: auto;
+    border: 0.2rem solid #0f2;
+  }
+  

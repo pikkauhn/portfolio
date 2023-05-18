@@ -10,35 +10,27 @@ import './Launch.css'
 function Launch() {
     const [details, setDetails] = useState("");
     const [loaded, setLoaded] = useState(false);
-    const [showButton, setShowButton] = useState(false);
     const [start, setStart] = useState(false);
     const isMounted = useRef(true);
     const navigate = useNavigate();
     let delay = 0;
     let content = "";
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ%$_!@#*&^';
     const length = 1000;
     for (let i = 0; i < length; i++) {
         content += characters[Math.floor(Math.random() * characters.length)]
     };
     let typingInterval;
     const hum = new Audio(loadHum);
-    
+
     const handleLink = () => {
-        hum.pause();
-        hum.currentTime = 0;
-        const congratulations = new Audio(congrats);
-        congratulations.play();
-        setTimeout(() => {
-            navigate('/aboutMe');
-        }, 4000);
+        setStart(true);
     };
 
     useEffect(() => {
-
         if (start) {
             hum.play();
-            setTimeout(() => {typing()}, 3000);
+            setTimeout(() => { typing() }, 3000);
         }
         return () => {
             hum.pause();
@@ -50,7 +42,14 @@ function Launch() {
         if (loaded) {
             setDetails("")
             delay = 80;
+            hum.pause();
+            hum.currentTime = 0;
             content = "LOAD SUCCESSFUL. . . . . . . . . . . . . .";
+
+            const congratulations = new Audio(congrats);
+            setTimeout(() => {congratulations.play()}, 4000)
+            
+
             typing();
         }
     }, [loaded]);
@@ -76,11 +75,15 @@ function Launch() {
         }
         if (i === content.length) {
             clearInterval(typingInterval);
-            if (loaded) {
-                setShowButton(true);
-            }
             if (!loaded) {
                 setLoaded(true);
+            }
+            if (loaded) {
+                hum.pause();
+                hum.currentTime = 0;
+                setTimeout(() => {
+                    navigate('/aboutMe');
+                }, 5000);
             }
         }
 
@@ -88,13 +91,9 @@ function Launch() {
 
     return (
         <div>
-            {(!start) ? <Link onClick={() => { setStart(true) }}>START</Link> : null}
+            {(!start) ? <Link to="#" onClick={handleLink}>LAUNCH!</Link> : null}
+            {/* {(!start) ? <Link onClick={() => { setStart(true) }}>START</Link> : null} */}
             {(start) ? <p>{details}</p> : null}
-            {(showButton) ?
-                <Link to="#" id="launchButton" onClick={handleLink}>
-                    LAUNCH!
-                </Link>
-                : null}
         </div>
     )
 }

@@ -10,8 +10,8 @@ import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div className="screen">
-        <div>
+      <div>
+        <div className="screen">
           <Header />
           <Routes>
             <Route path="/" element={<Launch />} />
