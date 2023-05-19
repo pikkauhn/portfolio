@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import useSound from 'use-sound';
 import loadHum from '../../assets/sounds/loadHum.wav';
 import congrats from '../../assets/sounds/congrats.mp3';
 import { Link, useNavigate } from 'react-router-dom';
@@ -21,35 +22,24 @@ function Launch() {
         content += characters[Math.floor(Math.random() * characters.length)]
     };
     let typingInterval;
-    const hum = new Audio(loadHum);
-
+    const [playHum, {pause}] = useSound(loadHum, { interrupt:true,});
+    const [playCongrats] = useSound(congrats, {interrupt:true,});
     const handleLink = () => {
         setStart(true);
     };
 
     useEffect(() => {
         if (start) {
-            hum.play();
-            setTimeout(() => { typing() }, 3000);
+            playHum();
+            setTimeout(() => { typing() }, 2000);
         }
-        return () => {
-            hum.pause();
-            hum.currentTime = 0;
-        };
     }, [start]);
 
     useEffect(() => {
         if (loaded) {
             setDetails("")
             delay = 80;
-            hum.pause();
-            hum.currentTime = 0;
             content = "LOAD SUCCESSFUL. . . . . . . . . . . . . .";
-
-            const congratulations = new Audio(congrats);
-            setTimeout(() => {congratulations.play()}, 4000)
-            
-
             typing();
         }
     }, [loaded]);
@@ -78,12 +68,12 @@ function Launch() {
             if (!loaded) {
                 setLoaded(true);
             }
-            if (loaded) {
-                hum.pause();
-                hum.currentTime = 0;
+            if (loaded) {                
+                playCongrats();
                 setTimeout(() => {
+                    pause();
                     navigate('/aboutMe');
-                }, 5000);
+                }, 3500);
             }
         }
 
@@ -92,7 +82,6 @@ function Launch() {
     return (
         <div>
             {(!start) ? <Link to="#" onClick={handleLink}>LAUNCH!</Link> : null}
-            {/* {(!start) ? <Link onClick={() => { setStart(true) }}>START</Link> : null} */}
             {(start) ? <p>{details}</p> : null}
         </div>
     )

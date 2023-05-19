@@ -7,7 +7,7 @@ import charSound3 from "../../assets/sounds/charSound3.wav";
 import './Aboutme.css';
 
 function AboutMe() {
-  const content = `Hello and thank you for visiting my portfolio! I'm Zachary Burns,<a recent Summa Cum Laude graduate of Capella University with a<Bachelor's degree in Software Development. During my time at Capella,<I consistently demonstrated a high level of skill and dedication to my<studies, earning recognition from both my professors and peers.<<I have experience working with Java, React, JavaScript,<Node.js, SQL, MySQL, and NoSQL (MongoDB), as well as various APIs.<I am currently learning Kotlin with Jetpack Compose, and I am<committed to continuing my education and professional development.<<Overall, I'm a driven and talented individual, and I'm looking forward to<making my mark in the world of software development.`;
+  let content = `Hello and thank you for visiting my portfolio! I'm Zachary Burns,<a recent Summa Cum Laude graduate of Capella University with a<Bachelor's degree in Software Development. During my time at Capella,<I consistently demonstrated a high level of skill and dedication to my<studies, earning recognition from both my professors and peers.<<I have experience working with Java, React, JavaScript,<Node.js, SQL, MySQL, and NoSQL (MongoDB), as well as various APIs.<I am currently learning Kotlin with Jetpack Compose, and I am<committed to continuing my education and professional development.<<Overall, I'm a driven and talented individual, and I'm looking forward to<making my mark in the world of software development.`;
   const [details, setDetails] = useState("");
   const imgRef = useRef();
   const isMounted = useRef(true);
@@ -72,6 +72,18 @@ function AboutMe() {
     if (imgRef.current) {
       imgRef.current.src = abstract;
     }
+  }, [])
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      isMounted.current = false;
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
   }, [])
 
   return (

@@ -53,12 +53,13 @@
   }
   
   .detailsBlock {
+    margin-top: -4vh;
     text-align: left;
     background-color: rgba(42, 171, 27, 0.21);
     margin-left: 15vw;
     width: 70vw;
     padding: 2vh;
-    height: 36vh;
+    height: 40vh;
     overflow: auto;
     border: 0.2rem solid #0f2;
   }
