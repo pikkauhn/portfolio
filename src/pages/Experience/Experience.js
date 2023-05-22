@@ -27,7 +27,7 @@ function Experience() {
   return (
     <div>
       <div className="expHeader">
-        <Link to="#" onClick={() => {setShow('experience')}}>Experience</Link>
+        <Link to="#" onClick={() => {(show !== 'experience') ? setShow('experience') : setShow('')}}>Experience</Link>
         <Link to="#">Projects</Link>
       </div>
       {

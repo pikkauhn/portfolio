@@ -29,14 +29,17 @@ function Launch() {
     };
 
     useEffect(() => {
-        if (start) {
+        if (start && isMounted) {
             playHum();
             setTimeout(() => { typing() }, 2000);
         }
+        return (() => {
+            pause();
+        })
     }, [start]);
 
     useEffect(() => {
-        if (loaded) {
+        if (loaded && isMounted) {
             setDetails("")
             delay = 80;
             content = "LOAD SUCCESSFUL. . . . . . . . . . . . . .";
@@ -78,6 +81,18 @@ function Launch() {
         }
 
     }
+
+    useEffect(() => {
+        const handleBeforeUnload = () => {
+          isMounted.current = false;
+        };
+    
+        window.addEventListener("beforeunload", handleBeforeUnload);
+    
+        return () => {
+          window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+      }, [])
 
     return (
         <div>

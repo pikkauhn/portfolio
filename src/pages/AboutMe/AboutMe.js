@@ -59,10 +59,8 @@ function AboutMe() {
       }
 
     }
-    const delay = 1000;
-    setTimeout(() => {
-      typingInterval = setInterval(typing, Math.random() * (80 - 10) + 10);
-    }, delay)
+    typing();
+
     return () => {
       clearInterval(typingInterval);
     }

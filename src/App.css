@@ -14,6 +14,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+
 }
 
 body {
@@ -21,6 +22,13 @@ body {
   height: 100%;
   overflow: hidden;
   padding: 0;
+}
+
+#all {
+  animation-name: textflicker;
+  animation-duration: .005s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .screen {
@@ -48,14 +56,14 @@ body {
   border: 3px solid var(--color-primary);
 }
 
-.Header > .left-text {
+.Header>.left-text {
   flex: 1;
   text-align: left;
   margin-left: 10px;
   font-size: 50px;
 }
 
-.Header > .right-text {
+.Header>.right-text {
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -64,7 +72,7 @@ body {
 }
 
 .right-text a:link {
-  padding-left: 20px;  
+  padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -85,7 +93,7 @@ a.active {
   color: var(--color-tertiary)
 }
 
-.Footer {  
+.Footer {
   font-family: 'Fira Mono', monospace;
   font-size: 20px;
   color: #0f2;
@@ -98,19 +106,19 @@ a.active {
   justify-content: center;
 }
 
-.Footer > .outerLine {
+.Footer>.outerLine {
   width: 30vw;
 }
 
-.Footer > .innerLine {
+.Footer>.innerLine {
   width: 10vw;
 }
 
-.Footer > hr {
+.Footer>hr {
   border-color: var(--color-primary);
 }
 
-.Footer > img {
+.Footer>img {
   height: 34px;
   width: 34.88px;
   filter: invert(65%) sepia(10%) saturate(6319%) hue-rotate(80deg) brightness(108%) contrast(126%);
@@ -118,14 +126,14 @@ a.active {
 
 .myEmail {
   position: absolute;
-  bottom: 0;  
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;  
+  font-size: 30px;
 }
 
-.myEmail > p:last-child:after {
+.myEmail>p:last-child:after {
   content: "";
 }
 
@@ -194,5 +202,17 @@ p:last-child:after {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #060, -2px 0 0 #0f2;
+    box-shadow: 1px 0 0 #060, -2px 0 0 #0f2;
+  }
+
+  to {
+    text-shadow: 2px 0.5px 2px #060, -1px -0.5px 2px #0f2;
+    box-shadow: 2px 0.5px 2px #060, -1px -0.5px 2px #0f2;
   }
 }
