@@ -8,8 +8,6 @@ import Launch from './pages/Launch/Launch';
 import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 
 function App() {
-
-
   return (
     <Router>
       <div id="all">

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import experience from '../../assets/jsons/experience.json';
+import project from '../../assets/jsons/project.json';
+import ProjectTest from '../../assets/images/ProjectTest.png';
 import './Experience.css'
-import { Link } from 'react-router-dom'
-import experience from '../../assets/jsons/experience.json'
 
 function Experience() {
   const expTitle = experience[0].Title;
@@ -11,24 +13,44 @@ function Experience() {
   const [show, setShow] = useState("");
   const [details, setDetails] = useState("");
   const [title, setTitle] = useState("");
+  const [projectTitle, setProjectTitle] = useState("");
+  const [projectDetail, setProjectDetail] = useState("");
+  const [projectimg, setProjectimg] = useState("");
 
   const handleExpLink = (idx) => {
     setTitle(expTitle[idx]);
     setDetails(expDetails[idx]);
-
+    if (title === expTitle[idx]) {
+      setTitle("")
+      setDetails("")
+    }
   }
 
   const handleEduLink = (idx) => {
     setTitle(eduTitle[idx]);
     setDetails(eduDetails[idx]);
+    if (title === eduTitle[idx]) {
+      setTitle("");
+      setDetails("");
+    }
+  }
 
+  const handleProjLink = (idx) => {
+      setProjectTitle(project[idx].caption);
+      setProjectDetail(project[idx].details);
+      setProjectimg(project[idx].image);
+    if (projectTitle === project[idx].caption) {
+      setProjectTitle("");
+      setProjectDetail("");
+      setProjectimg("");
+    }
   }
 
   return (
     <div>
       <div className="expHeader">
-        <Link to="#" onClick={() => {(show !== 'experience') ? setShow('experience') : setShow('')}}>Experience</Link>
-        <Link to="#">Projects</Link>
+        <Link to="#" onClick={() => { (show !== 'experience') ? setShow('experience') : setShow('') }}>Experience</Link>
+        <Link to="#" onClick={() => { (show !== 'projects') ? setShow('projects') : setShow('') }}>Projects</Link>
       </div>
       {
         (show === 'experience') ?
@@ -62,11 +84,35 @@ function Experience() {
                   <Link to="#" className="items" onClick={() => handleEduLink(idx)} key={idx}>{data}</Link>
                 )
               }
-
               )}
             </div>
           </div>
           : null}
+
+      {
+        (show === 'projects') ?
+          <div className='project-container'>
+            {(projectimg !== "") ?
+              <div className="projects">
+                <img className="projectImg" src={projectimg} alt={projectimg} />
+                <div className="overlay" />
+                <div className="projectInfo">
+                <h2 className="projectTitle">{projectTitle}</h2>
+                <p className="projectDetails">{projectDetail}</p>
+                </div>
+              </div>
+              : null}
+
+            <div className="projectSelect">
+              {project.map((data, idx) => {
+                return (
+                  <Link to="#" className="projectTitles" onClick={() => handleProjLink(idx)} key={idx}>{data.caption}</Link>
+                )
+              })}
+            </div>
+          </div>
+          : null
+      }
     </div>
   )
 }
