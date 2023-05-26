@@ -2,43 +2,64 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import experience from '../../assets/jsons/experience.json';
 import project from '../../assets/jsons/project.json';
-import ProjectTest from '../../assets/images/ProjectTest.png';
+import Project1 from '../../assets/images/Project1.jpg';
+import Project2 from '../../assets/images/Project2.png';
+import Project3 from '../../assets/images/Project3.png';
+import Project4 from '../../assets/images/Project4.PNG';
+import Project5 from '../../assets/images/Project5.jpg';
+import Project6 from '../../assets/images/Project6.jpg';
 import './Experience.css'
 
 function Experience() {
   const expTitle = experience[0].Title;
   const eduTitle = experience[1].Title;
-  const expDetails = experience[2].Details;
-  const eduDetails = experience[2].Details;
+  const expsubTitle = experience[2].subTitle;
+  const edusubTitle = experience[3].subTitle
+  const expDetails = experience[4].Details;
+  const eduDetails = experience[5].Details;
   const [show, setShow] = useState("");
   const [details, setDetails] = useState("");
   const [title, setTitle] = useState("");
+  const [subTitle, setSubTitle] = useState("");
   const [projectTitle, setProjectTitle] = useState("");
   const [projectDetail, setProjectDetail] = useState("");
-  const [projectimg, setProjectimg] = useState("");
+  const [projectimg, setProjectimg] = useState("");  
+
+  const images = [
+    Project1,
+    Project2,
+    Project3,
+    Project4,
+    Project5,
+    Project6
+  ]
 
   const handleExpLink = (idx) => {
     setTitle(expTitle[idx]);
     setDetails(expDetails[idx]);
+    setSubTitle(expsubTitle[idx]);
     if (title === expTitle[idx]) {
-      setTitle("")
-      setDetails("")
+      setTitle("");
+      setDetails("");
+      setSubTitle("");
     }
   }
 
   const handleEduLink = (idx) => {
     setTitle(eduTitle[idx]);
     setDetails(eduDetails[idx]);
+    setSubTitle(edusubTitle[idx]);
     if (title === eduTitle[idx]) {
       setTitle("");
       setDetails("");
+      setSubTitle("");
     }
   }
 
   const handleProjLink = (idx) => {
-      setProjectTitle(project[idx].caption);
-      setProjectDetail(project[idx].details);
-      setProjectimg(project[idx].image);
+    setProjectTitle(project[idx].caption);
+    setProjectDetail(project[idx].details);
+    setProjectimg(images[idx]);
     if (projectTitle === project[idx].caption) {
       setProjectTitle("");
       setProjectDetail("");
@@ -59,7 +80,8 @@ function Experience() {
               <div className="subTitle">
                 <h2>Work Related</h2>
                 <div className="detailsBlock">
-                  <h3 className="title">{title}</h3>
+                  <h2 className="title">{title}</h2>
+                  <h3 className="location">{subTitle}</h3>
                   <p>
                     {details}
                   </p>
@@ -94,11 +116,11 @@ function Experience() {
           <div className='project-container'>
             {(projectimg !== "") ?
               <div className="projects">
-                <img className="projectImg" src={projectimg} alt={projectimg} />
+                <img className="projectImg" src={projectimg} alt="project test" />
                 <div className="overlay" />
                 <div className="projectInfo">
-                <h2 className="projectTitle">{projectTitle}</h2>
-                <p className="projectDetails">{projectDetail}</p>
+                  <h2 className="projectTitle">{projectTitle}</h2>
+                  <p className="projectDetails">{projectDetail}</p>
                 </div>
               </div>
               : null}

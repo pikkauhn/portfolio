@@ -19,11 +19,18 @@
 .subTitle {
   border-bottom: 0.2rem solid #0f2;
   cursor: default;
+  height: 5vh;
 }
 
 .subTitle > h2,
 .subTitle > p {
   display: inline;
+}
+
+.title {
+  margin-top: 0;
+  border-bottom: 2px solid #0f2;
+  width: 30vw;
 }
 
 .subTitle,
@@ -115,8 +122,8 @@
 
 .projectTitles {
   font-family: 'Fira Mono', monospace;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 3.8vw;
+  margin-right: 3.8vw;
   font-size: 2rem;
   color: #0f2;
   border-bottom: 2px solid #0f2;
