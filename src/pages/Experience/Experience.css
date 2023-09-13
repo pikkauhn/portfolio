@@ -29,8 +29,12 @@
 
 .title {
   margin-top: 0;
-  border-bottom: 2px solid #0f2;
   width: 30vw;
+}
+
+hr {
+  width: 30vw;
+  color: #0f2;
 }
 
 .subTitle,

@@ -81,6 +81,7 @@ function Experience() {
                 <h2>Work Related</h2>
                 <div className="detailsBlock">
                   <h2 className="title">{title}</h2>
+                  <hr />
                   <h3 className="location">{subTitle}</h3>
                   <p>
                     {details}
