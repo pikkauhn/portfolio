@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "caption": "searcywater.org",
+        "caption": "Project1",
         "image": "ProjectTest",
         "details": "Over the course of several months, a friend and I built a MERN (MongoDB, Express, React, Node) full stack application for Searcy Water Utilities' website. This was a much needed update to the website, as their old version was created in the early 2000s. The website we built is responsive and features an administrative side that allows an admin to make changes to json files that alter the data shown on the website. This allows them to keep their site up to date without requiring coding experience. The login for an admin features two factor authentication utilizing bcrypt for verification."
     },
