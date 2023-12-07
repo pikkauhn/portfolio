@@ -1,0 +1,137 @@
+.expHeader {
+  margin: 5vh 2vw;
+  padding: 1rem 2rem;
+}
+
+.expHeader a:link {
+  display: inline;
+  margin-right: 3vw;
+  font-size: 3rem;
+  padding: 1rem 1vw 1rem 0;
+  border-bottom: 2px solid #0f2;
+  border-right: 2px solid #0f2;
+}
+
+.expHeader a:hover {
+  background-color: #060;
+}
+
+.subTitle {
+  border-bottom: 0.2rem solid #0f2;
+  cursor: default;
+  height: 5vh;
+}
+
+.subTitle > h2,
+.subTitle > p {
+  display: inline;
+}
+
+.title {
+  margin-top: 0;
+  width: 30vw;
+}
+
+hr {
+  width: 30vw;
+  color: #0f2;
+}
+
+.subTitle,
+.items {
+  height: 5vh;
+  width: 12vw;
+  text-align: right;
+  margin-left: 6.5vw;
+  padding-right: 1vw;
+  border-right: 0.2rem solid #0f2;
+}
+
+.items {
+  display: flex;
+  justify-content: right;
+  border-bottom: 0.2rem solid #060;
+  padding: 1vh 1vw;
+}
+
+.items:last-child:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.items:hover {
+  background-color: #060;
+}
+
+.detailsBlock {
+  margin-top: -4vh;
+  text-align: left;
+  background-color: rgba(42, 171, 27, 0.21);
+  margin-left: 15vw;
+  width: 70vw;
+  padding: 2vh;
+  height: 40vh;
+  overflow: auto;
+  border: 0.2rem solid #0f2;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  display: flex;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.projects .projectImg {
+  border: 2px solid #0f2;
+  height: 45vh;
+  width: 35vw;
+  margin-right: 2vw;
+}
+
+.projects > .overlay {
+  position: absolute;
+  width: 35vw;
+  height: 45vh;
+  background-color: #060;
+  opacity: .1;
+  z-index: 1;
+}
+
+.projects > .overlay:hover {
+  opacity: 0;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  width: 53vw;
+}
+
+.projectTitle {
+  margin-top: 0;
+  border-bottom: 2px solid #0f2;
+  padding-bottom: 1vh;
+  width: 10vw;
+}
+
+.projectSelect {
+  position: absolute;
+  margin-top: 49vh;
+}
+
+.projectTitles {
+  font-family: 'Fira Mono', monospace;
+  margin-left: 3.8vw;
+  margin-right: 3.8vw;
+  font-size: 2rem;
+  color: #0f2;
+  border-bottom: 2px solid #0f2;
+  border-right: 2px solid #0f2;
+  padding-bottom: 1vh;
+  padding-right: 1vw;
+}
