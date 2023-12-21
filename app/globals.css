@@ -19,13 +19,13 @@ a:hover {
 
 .contentShape {
   top: 25vh;
-  left: 18vw;
+  left: 15vw;
   position:absolute;
   height: 60vh;
-  width: 60vw;  
+  width: 70vw;  
   border: 5px solid transparent;
   animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
-  clip-path: polygon(7% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 15%);
+  clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
 }
 
 @keyframes contentShapeExpand {
@@ -34,15 +34,38 @@ a:hover {
     height: 0vh;
   }
   100% {
-    width: 60vw;
+    width: 70vw;
     height: 60vh;
   }
 }
 
-.pageContent {
-  margin-top: 5vh;
+.pageHeader {
+  margin-top: 2vh;
   margin-left: 4vw;
+  width: 10vw;
+  border-bottom: 2px solid transparent;
+  animation: colorPulse 5s infinite ease-in-out;
 }
+
+.pageContent {
+  padding-right: 3vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  height: 47vh;
+  overflow-y: auto;
+}
+
+.pageContent::-webkit-scrollbar {
+  margin-left: 5vw;
+  width: 10px;
+  border: 1px solid;
+}
+
+.pageContent::-webkit-scrollbar-thumb {
+  width: 1px;
+  border: 1px solid;
+}
+
 
 .screen {
   animation:colorPulse 5s infinite ease-in-out;
@@ -74,6 +97,23 @@ p:last-child:after {
   content:"_";
 }
 
+/* Keyframes for the animation */
+@keyframes scrollPulse {
+  0%,
+  100% {
+    background-color: rgb(17, 166, 252, 1);
+  }
+
+  48%,
+  52% {
+    background-color: rgba(17, 166, 252, .5);
+  }
+
+  50% {
+    background-color: rgba(17, 166, 252, .1);
+  }
+}
+
 
 @keyframes colorPulse {
 
@@ -92,6 +132,8 @@ p:last-child:after {
   50% {
       color: rgba(17, 166, 252, .1);
       border-color: rgba(17, 166, 252, .1);
+      
+      scrollbar-color: rgba(17, 166, 252, .1);
   }
 }
 
