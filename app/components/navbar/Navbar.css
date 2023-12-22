@@ -9,8 +9,8 @@
 }
 
 .profile {
-    height: 29.8vh;
-    width: 11.75vw;
+    height: 28.6vh;
+    width: 11.2vw;
     animation: imageBlink 5s ease-in-out;    
     filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
     z-index: 1;

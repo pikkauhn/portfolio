@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import '/node_modules/primeflex/primeflex.css'
+        
+import "primereact/resources/themes/lara-dark-blue/theme.css";
+
 
 import Navbar from './components/navbar/Navbar'
 

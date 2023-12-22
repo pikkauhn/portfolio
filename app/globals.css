@@ -17,6 +17,11 @@ a:hover {
   padding-top: 2vh;
 }
 
+.buttons {
+  margin-right: 1vw;
+  animation: colorPulse 5s infinite ease-in-out;
+}
+
 .contentShape {
   top: 25vh;
   left: 15vw;

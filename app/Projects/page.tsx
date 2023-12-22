@@ -1,12 +1,17 @@
 import React from 'react'
+import ProjectDesc from '../components/ProjectDesc'
+
 
 const page = () => {
+
+
   return (
     <div>
-    <div className='contentShape'>
-        <p className='pageContent'>Projects</p>
+      <div className='contentShape'>
+        <h2 className="pageHeader">Projects</h2>
+        <ProjectDesc />
+      </div>
     </div>
-</div>
   )
 }
 
