@@ -42,7 +42,7 @@ const EducationDesc = () => {
                             ))}
                         </ul>
                         <ul>
-                            <h3 className="centerButton"><a href="/transcript.pdf">View Transcript</a></h3>
+                            <h3 className="centerButton"><a href="/transcript.pdf" target="_blank">View Transcript</a></h3>
                         </ul>
                     </div>
                 )
