@@ -19,7 +19,17 @@ a:hover {
 
 .buttons {
   margin-right: 1vw;
+  border-radius: 0;
   animation: colorPulse 5s infinite ease-in-out;
+}
+
+.buttons:hover {
+  background-color: rgba(59, 155, 211, 0.2);
+}
+
+.centerButton {
+  margin-left: 35%;
+  margin-top: 5%;
 }
 
 .contentShape {
@@ -52,11 +62,15 @@ a:hover {
   animation: colorPulse 5s infinite ease-in-out;
 }
 
+.projectSelection {
+  margin-left: 4vw;
+}
+
 .pageContent {
   padding-right: 3vw;
   margin-left: 4vw;
   margin-right: 4vw;
-  height: 47vh;
+  height: 42vh;
   overflow-y: auto;
 }
 

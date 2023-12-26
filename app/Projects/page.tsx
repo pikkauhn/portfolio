@@ -6,12 +6,10 @@ const page = () => {
 
 
   return (
-    <div>
       <div className='contentShape'>
         <h2 className="pageHeader">Projects</h2>
         <ProjectDesc />
       </div>
-    </div>
   )
 }
 

@@ -12,7 +12,7 @@ interface Description {
   url: string;
 }
 
-const ProjectDesc = () => {
+const ExperienceDesc = () => {
   const [visibleProjects, setVisibleProjects] = useState<Record<string, boolean>>({});
 
   const projectList: Description[] = [
@@ -158,4 +158,4 @@ const ProjectDesc = () => {
   )
 }
 
-export default ProjectDesc
+export default ExperienceDesc
