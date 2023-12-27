@@ -4,12 +4,13 @@ import { Button } from 'primereact/button';
 
 interface Description {
   visible: boolean;
-  title: string;
   name: string;
-  technologies: string[];
-  features: string[];
-  benefits: string[];
-  url: string;
+  title: string;
+  workplace: string;
+  header1: string;
+  header2: string;
+  description: string[];
+  highlights: string[];
 }
 
 const ExperienceDesc = () => {
@@ -18,102 +19,61 @@ const ExperienceDesc = () => {
   const projectList: Description[] = [
     {
       visible: false,
-      title: "Time Off Management System",
-      name: "project1",
-      technologies: [
-        "TypeScript",
-        "Next.js13 with App Router",
-        "Prisma with PostgreSQL",
-        "Prime React with Prime Flex"
+      name: 'exp1',
+      title: "IT Coordinator",
+      workplace: "Searcy Water Utilities",
+      header1: 'Key Achievements:',
+      description: [
+        "Spearhead IT support for staff, adeptly managing hardware, software, and networking challenges",
+      "Enhance customer satisfaction by addressing website and account-related issues, ensuring a seamless user experience.",
+      "Collaborate with vendors, resolving hardware and software problems, facilitating migrations, and streamlining equipment acquisitions.",
+      "Ensure billing accuracy by managing meter readings and optimizing database operations to produce comprehensive billing and water usage reports for upper management."
       ],
-      features: [
-        "Streamlined time off requests and approvals",
-        "Simplified leave management for managers",
-        "Real-time request tracking",
-        "Centralized dashboard",
-        "Automatic notifications"
+      header2: 'Impactful Contributions:',
+      highlights: [
+        "Initiated and led the development of a new website utilizing MERN stack technologies (MongoDB, Express, React, Node.js), while actively contributing to its design and content creation. This effort resulted in a more dynamic online presence.",
+        "Integrated Google ReCaptcha API, ArcGIS, and additional packages, enhancing user experience and functionality.",
+        "Spearheaded and played a leading role in the implementation of a new VOIP system, replacing the outdated POTS phone system across four city locations.",
+        "Initiated, led, and significantly contributed to the ongoing project for the replacement of the card merchant and the development of a new online payment portal, poised to optimize transaction processes for enhanced efficiency and security.",
+        "Orchestrated the creation of automation scripts using AutoHotkey (AHK), delivering a remarkable 30% reduction in monthly labor hours, significantly enhancing billing efficiency."
       ],
-      benefits: [
-        "Improved employee morale and satisfaction",
-        "Enhanced transparency and communication",
-        "Streamlined processes for managers",
-        "Saving time and resources"
-      ],
-      url: "https://swu-vacalendar.onrender.com"
     },
     {
       visible: false,
-      title: "Searcy Water Utilities Website",
-      name: "project2",
-      technologies: [
-        "JavaScript",
-        "CRA - Create React App",
-        "Bcryptjs, Cors, Express, Mongoose, Multer, Nodemailer",
-        "MUI, Axios, Recaptcha, React-Router-Dom, React-PDF",
+      name: 'exp2',
+      title: "IT Manager",
+      workplace: "Computer Consulting and Repair",
+      header1: 'Key Responsibilities',
+      description: [
+        "Facilitated the onboarding process for new team members by delivering comprehensive training and providing clear and efficient explanations of company protocols.",
+      "Conducted in-depth research on a variety of computer systems and databases to effectively address customer complaints and inquiries, ensuring prompt issue resolution.",
+      "Acted as a liaison between customers and upper management, effectively communicating and referring complex issues while maintaining positive customer relationships.",
+      "Demonstrated strong verbal and negotiation skills in resolving customer complaints and concerns, consistently upholding a courteous and professional demeanor.",
+      "Provided diligent support and adeptly resolved customer problems, ensuring their satisfaction with every interaction.",
+      "Responded promptly and effectively to customer service emails, adhering to established timelines.",
+      "Conducted thorough research, documentation, and escalation of cases to higher levels of support in accordance with internal procedures.",
+      "Achieved promotion to the role of Office Manager in 2015, assuming the primary on-site technician responsibilities for non-contracted clients and serving as the secondary on-site technician for contracted clients."
       ],
-      features: [
-        "Significantly updated customer experience with better UI",
-        "Allows customers to fill out forms for different services",
-        "Shows customers useful data such as our billing calendar",
-        "Provides customers with current information via Facebook posts",
-        "Has an admin side that allows management to easily make changes to data shown on the website",
-        "Admin login is saved in a NoSQL database, encrypted with Bcryptjs, and sign in requires MFA"
-      ],
-      benefits: [
-        "Improved customer experience",
-        "Enhanced communication between the business and customers",
-        "Brings some services closer to automation",
-        "Saves time and resources from customers and employees"
-      ],
-      url: "https://www.searcywater.org"
+      header2: '',
+      highlights: [],
     },
-    {
-      visible: false,
-      title: "Name Puller",
-      name: "project3",
-      technologies: [
-        "JavaScript",
-        "CRA - Create React App",
-        "Axios, Supabase, Prime Icons, and Prime React",
-      ],
-      features: [
-        "Simple App for my family members to draw names for Christmas",
-        "Easy to Use, easy to check",
-        "Data is stored in a database"
-      ],
-      benefits: [
-        "Users can draw a random name regardless of their current location",
-        "Never repeats a drawn name as the rows update and are maintained with Supabase",
-      ],
-      url: "https://namepuller.onrender.com"
-    }
   ]
 
   return (
     <div>
       <div className="projectSelection">
-        <Button className='buttons' outlined label='Vacalendar' onClick={() => {
+        <Button className='buttons' outlined label='IT Coordinator' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project1: !visibleProjects.project1,
-            project2: false,
-            project3: false
+            exp1: !visibleProjects.exp1,
+            exp2: false
           })
         }} />
-        <Button className='buttons' outlined label='SWU Website' onClick={() => {
+        <Button className='buttons' outlined label='IT Manager' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project2: !visibleProjects.project2,
-            project1: false,
-            project3: false
-          })
-        }} />
-        <Button className='buttons' outlined label='Name Puller' onClick={() => {
-          setVisibleProjects({
-            ...visibleProjects,
-            project3: !visibleProjects.project3,
-            project2: false,
-            project1: false
+            exp2: !visibleProjects.exp2,
+            exp1: false,
           })
         }} />
       </div>
@@ -126,27 +86,21 @@ const ExperienceDesc = () => {
                 {visibleProjects[data.name] && (
                   <>
                     <h2>{data.title}</h2>
-                    <p>Built with:</p>
+                    <p>Employer:</p>
                     <ul>
-                      {data.technologies.map((tech: any, idx: any) => (
-                        <li key={idx}>{tech}</li>
-                      ))}
+                      {data.workplace}
                     </ul>
-                    <h3>Key Features:</h3>
+                    <h3>{data.header1}</h3>
                     <ul>
-                      {data.features.map((feature: any, index: any) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-                    <h3>Benefits:</h3>
-                    <ul>
-                      {data.benefits.map((benefit: any, index: any) => (
+                      {data.description.map((benefit: any, index: any) => (
                         <li key={index}>{benefit}</li>
                       ))}
                     </ul>
-                    <h3>URL:</h3>
+                    <h3>{data.header2}</h3>
                     <ul>
-                      <a href={data.url} target="_blank">{data.url}</a>
+                      {data.highlights.map((benefit: any, index: any) => (
+                        <li key={index}>{benefit}</li>
+                      ))}
                     </ul>
                   </>)}
               </div>
