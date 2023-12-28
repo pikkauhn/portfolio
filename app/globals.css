@@ -1,11 +1,15 @@
 body {
-  margin: 0;  
+  margin: 0;
+}
+
+html {
+  font-size: 16px;  
 }
 
 a {
-  padding: 2rem;
+  padding: 1.25rem;  
   text-decoration: none;
-  cursor:pointer;
+  cursor: pointer;
   color: inherit;
 }
 
@@ -35,9 +39,9 @@ a:hover {
 .contentShape {
   top: 25vh;
   left: 15vw;
-  position:absolute;
+  position: absolute;
   height: 60vh;
-  width: 70vw;  
+  width: 70vw;
   border: 5px solid transparent;
   animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
@@ -48,6 +52,7 @@ a:hover {
     width: 0vw;
     height: 0vh;
   }
+
   100% {
     width: 70vw;
     height: 60vh;
@@ -87,37 +92,38 @@ a:hover {
 
 
 .screen {
-  animation:colorPulse 5s infinite ease-in-out;
-  background-image:radial-gradient(#444, #111);
-  box-shadow:0 0 5vmin 1vmin #000 inset;
-  box-sizing:border-box;
-  font-family:'Fira Mono', monospace;
-  font-size:20px;
-  height:100vh;
-  overflow:hidden;
-  width:100vw;  
+  animation: colorPulse 5s infinite ease-in-out;
+  background-image: radial-gradient(#444, #111);
+  box-shadow: 0 0 5vmin 1vmin #000 inset;
+  box-sizing: border-box;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.25rem;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .screen:after {
-  background-image:linear-gradient(transparent, transparent 3px, #222);
-  background-size:4px 4px;
-  bottom:0;
-  content:"";
-  left:0;
-  pointer-events:none;
-  position:absolute;
-  right:0;
-  top:0;
+  background-image: linear-gradient(transparent, transparent 3px, #222);
+  background-size: 4px 4px;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 10;
 }
 
 p:last-child:after {
-  animation:blink 1s infinite;
-  content:"_";
+  animation: blink 1s infinite;
+  content: "_";
 }
 
 /* Keyframes for the animation */
 @keyframes scrollPulse {
+
   0%,
   100% {
     background-color: rgb(17, 166, 252, 1);
@@ -138,27 +144,27 @@ p:last-child:after {
 
   0%,
   100% {
-      color: rgb(17, 166, 252, 1);
-      border-color: rgba(17, 166, 252, 1);
+    color: rgb(17, 166, 252, 1);
+    border-color: rgba(17, 166, 252, 1);
   }
 
   48%,
   52% {
-      color: rgba(17, 166, 252, .5);
-      border-color: rgba(17, 166, 252, .5);
+    color: rgba(17, 166, 252, .5);
+    border-color: rgba(17, 166, 252, .5);
   }
 
   50% {
-      color: rgba(17, 166, 252, .1);
-      border-color: rgba(17, 166, 252, .1);
-      
-      scrollbar-color: rgba(17, 166, 252, .1);
+    color: rgba(17, 166, 252, .1);
+    border-color: rgba(17, 166, 252, .1);
+
+    scrollbar-color: rgba(17, 166, 252, .1);
   }
 }
 
 @keyframes blink {
   50% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
@@ -166,27 +172,34 @@ p:last-child:after {
   0% {
     opacity: 100;
   }
+
   10% {
     opacity: 0;
   }
+
   30% {
-      opacity: 100;
-  }  
+    opacity: 100;
+  }
+
   48% {
-      opacity: 0;
+    opacity: 0;
   }
+
   52% {
-      opacity: 100;
+    opacity: 100;
   }
+
   50% {
     opacity: 0;
   }
+
   70% {
     opacity: 100;
   }
+
   100% {
     opacity: 0;
-}
+  }
 }
 
 @keyframes bgPulse {

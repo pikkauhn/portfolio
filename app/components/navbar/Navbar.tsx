@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className='flex shape mt-3'>
         <Image className="profile" alt='Profile Picture' src={me} />
       </div>
-      <div className='navBar mt-6'>
+      <div className='navBar flex mt-6'>
         <div className="linkies">
           <a href="/" className='ml-5'>About Me</a>
           <a href="/Projects" className='ml-5'>Projects</a>

@@ -1,7 +1,7 @@
 .shape {
-    height: 29.8vh;
-    width: 11.75vw;
-    margin-left: 2vw;
+    height: 280px;
+    width: 220px;
+    margin-left: 30px;
     border: 5px solid transparent;
     animation: colorPulse 5s infinite ease-in-out;
     clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
@@ -9,8 +9,8 @@
 }
 
 .profile {
-    height: 28.6vh;
-    width: 11.2vw;
+    height: 270px;
+    width: 210px;
     animation: imageBlink 5s ease-in-out;    
     filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
     z-index: 1;
@@ -21,8 +21,11 @@
 }
 
 .navBar {
+    position: absolute;
+    margin-left: 250px;
+    margin-right: 50px;
     height: 6.5vh;
-    width: 83vw;   
+    width: 80vw;   
     border-bottom: 2px solid transparent;
     border-top: 2px solid transparent;
     border-color: transparent;
