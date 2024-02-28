@@ -12,7 +12,7 @@
 .profile {
     height: 270px;
     width: 210px;
-    animation: imageBlink 5s ease-in-out;  
+    animation: imageBlink 5s ease-in-out;
     filter: hue-rotate(0deg) brightness(60%);
     z-index: 1;
 }
@@ -23,7 +23,7 @@
 
 .navBar {
     position: absolute;
-    margin-left: 250px;    
+    margin-left: 250px;
     height: 65px;
     min-width: 10vw;
     width: 80vw;
@@ -33,4 +33,39 @@
     animation: colorPulse 5s infinite ease-in-out, bgPulse 5s infinite ease-in-out;
     clip-path: polygon(0% 0, 100% 0, 100% 0%, 98% 100%, 0 100%, 0% 0%);
     z-index: 1;
+}
+
+.sideBar {
+    height: 50vh;
+    width: 50vw;
+    border: 2px solid transparent;
+
+    animation: colorBlink 5s infinite, bgPulse 5s infinite ease-in-out;
+}
+
+@keyframes colorBlink {
+
+    0%,
+    100% {
+        color: rgb(17, 166, 252, 1);
+        border-color: rgba(17, 166, 252, 1);
+        background-color: rgba(59, 155, 211, 0.2);
+        background-position: 0% 50%;
+    }
+
+    48%,
+    52% {
+        color: rgba(17, 166, 252, .5);
+        border-color: rgba(17, 166, 252, .5);
+        background-color: rgba(2, 102, 148, 0.1);
+        background-position: 100% 50%;
+    }
+
+    50% {
+        color: rgba(17, 166, 252, .1);
+        border-color: rgba(17, 166, 252, .1);
+        background-color: rgba(10, 75, 119, 0);
+        background-position: 50% 50%;
+        scrollbar-color: rgba(17, 166, 252, .1);
+    }
 }

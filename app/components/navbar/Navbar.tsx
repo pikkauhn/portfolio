@@ -1,21 +1,35 @@
 'use client'
-import React from 'react'
-import Image from 'next/image'
-import me from '../../assets/images/me.jpg'
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import me from '../../assets/images/me.jpg';
+import { PrimeIcons } from 'primereact/api';
+import { Sidebar } from 'primereact/sidebar';
+import { Button } from 'primereact/button';
 
-import './Navbar.css'
+
+
+import './Navbar.css';
 import useWindowWidth from '../useWindowWidth'
 
 const Navbar = () => {
+  const [visible, setVisible] = useState<boolean>(false);
   const width = useWindowWidth();
+  const router = useRouter();
 
   return (
     <>
-      {width < 900 ? 
-
-null
-        
-       :
+      {width < 900 ?
+      <>
+        <Button outlined icon={PrimeIcons.BARS} onClick={() => setVisible(true)}/>
+        <Sidebar className='sideBar' visible={visible} onHide={() => setVisible(false)}>
+        <Button outlined label="About Me" onClick={() => {router.replace('/')}}/>
+        <Button outlined label="Projects" onClick={() => {router.replace('/Projects')}}/>
+        <Button outlined label="Education" onClick={() => {router.replace('/Education')}}/>
+        <Button outlined label="Experience" onClick={() => {router.replace('/Experience')}}/>
+        </Sidebar>
+</>
+        :
         <div className="flex flex-row flex-wrap">
           <div className='flex shape mt-3'>
             <Image className="profile" alt='Profile Picture' src={me} />
