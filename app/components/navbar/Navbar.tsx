@@ -12,10 +12,10 @@ const Navbar = () => {
       </div>
       <div className='navBar flex mt-6'>
         <div className="linkies">
-          <a href="/" className='ml-5'>About Me</a>
-          <a href="/Projects" className='ml-5'>Projects</a>
-          <a href="/Education" className='ml-5'>Education</a>
-          <a href="/Experience" className='ml-5'>Experience</a>
+          <a href="/">About Me</a>
+          <a href="/Projects">Projects</a>
+          <a href="/Education">Education</a>
+          <a href="/Experience">Experience</a>
         </div>
       </div>
     </div>

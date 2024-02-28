@@ -6,7 +6,8 @@ html {
   font-size: 16px;  
 }
 
-a {
+a {  
+  margin-left: 1rem;
   padding: 1.25rem;  
   text-decoration: none;
   cursor: pointer;
@@ -18,11 +19,11 @@ a:hover {
 }
 
 .linkies {
-  padding-top: 2vh;
+  padding-top: 1.2rem;
 }
 
 .buttons {
-  margin-right: 1vw;
+  margin-right: 20px;
   border-radius: 0;
   animation: colorPulse 5s infinite ease-in-out;
 }
@@ -37,9 +38,9 @@ a:hover {
 }
 
 .contentShape {
-  top: 25vh;
-  left: 15vw;
   position: absolute;
+  top: 15rem;
+  left: 15rem;
   height: 60vh;
   width: 70vw;
   border: 5px solid transparent;
@@ -60,8 +61,8 @@ a:hover {
 }
 
 .pageHeader {
-  margin-top: 2vh;
-  margin-left: 4vw;
+  margin-top: 1.2rem;
+  margin-left: 4rem;
   width: 10vw;
   border-bottom: 2px solid transparent;
   animation: colorPulse 5s infinite ease-in-out;
@@ -92,25 +93,26 @@ a:hover {
 
 
 .screen {
-  animation: colorPulse 5s infinite ease-in-out;
+  background-size: cover;
   background-image: radial-gradient(#444, #111);
+  background-position: center;
+  min-height: 100vh;
+  animation: colorPulse 5s infinite ease-in-out;
   box-shadow: 0 0 5vmin 1vmin #000 inset;
   box-sizing: border-box;
   font-family: 'Fira Mono', monospace;
   font-size: 1.25rem;
-  height: 100vh;
   overflow: hidden;
-  width: 100vw;
 }
 
 .screen:after {
+  position: absolute;
   background-image: linear-gradient(transparent, transparent 3px, #222);
   background-size: 4px 4px;
   bottom: 0;
   content: "";
   left: 0;
   pointer-events: none;
-  position: absolute;
   right: 0;
   top: 0;
   z-index: 10;
@@ -171,10 +173,13 @@ p:last-child:after {
 @keyframes imageBlink {
   0% {
     opacity: 100;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
   }
 
   10% {
     opacity: 0;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
+
   }
 
   30% {
@@ -183,6 +188,8 @@ p:last-child:after {
 
   48% {
     opacity: 0;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
+
   }
 
   52% {
@@ -191,14 +198,17 @@ p:last-child:after {
 
   50% {
     opacity: 0;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
   }
 
   70% {
     opacity: 100;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
   }
 
   100% {
     opacity: 0;
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
   }
 }
 

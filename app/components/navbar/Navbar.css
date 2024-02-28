@@ -1,4 +1,5 @@
 .shape {
+    position: absolute;
     height: 280px;
     width: 220px;
     margin-left: 30px;
@@ -11,21 +12,21 @@
 .profile {
     height: 270px;
     width: 210px;
-    animation: imageBlink 5s ease-in-out;    
-    filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
+    animation: imageBlink 5s ease-in-out;  
+    filter: hue-rotate(0deg) brightness(60%);
     z-index: 1;
 }
 
 .profile:hover {
-    filter: hue-rotate(0deg) brightness(60%);
+    filter: hue-rotate(0deg) brightness(100%);
 }
 
 .navBar {
     position: absolute;
-    margin-left: 250px;
-    margin-right: 50px;
-    height: 6.5vh;
-    width: 80vw;   
+    margin-left: 250px;    
+    height: 65px;
+    min-width: 10vw;
+    width: 80vw;
     border-bottom: 2px solid transparent;
     border-top: 2px solid transparent;
     border-color: transparent;

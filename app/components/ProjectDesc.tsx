@@ -69,12 +69,15 @@ const ProjectDesc = () => {
     },
     {
       visible: false,
-      title: "Name Puller",
+      title: "Searcy Sanitation Bin Tracking App",
       name: "project3",
       technologies: [
-        "JavaScript",
-        "CRA - Create React App",
-        "Axios, Supabase, Prime Icons, and Prime React",
+        "Typescript",
+        "Next.js14 with App Router",
+        "Prisma with PostgreSQL",
+        "Prime React with Prime Flex",
+        "Next-Auth",
+        "Argon2"
       ],
       features: [
         "Simple App for my family members to draw names for Christmas",
@@ -85,7 +88,7 @@ const ProjectDesc = () => {
         "Users can draw a random name regardless of their current location",
         "Never repeats a drawn name as the rows update and are maintained with Supabase",
       ],
-      url: "https://namepuller.onrender.com"
+      url: "https://github.com/pikkauhn/sanitation/"
     }
   ]
 
@@ -108,7 +111,7 @@ const ProjectDesc = () => {
             project3: false
           })
         }} />
-        <Button className='buttons' outlined label='Name Puller' onClick={() => {
+        <Button className='buttons' outlined label='Sanitation App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
             project3: !visibleProjects.project3,
