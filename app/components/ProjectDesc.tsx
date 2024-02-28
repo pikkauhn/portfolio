@@ -69,7 +69,7 @@ const ProjectDesc = () => {
     },
     {
       visible: false,
-      title: "Searcy Sanitation Bin Tracking App",
+      title: "Sanitation Bin Tracking App",
       name: "project3",
       technologies: [
         "Typescript",
@@ -80,13 +80,16 @@ const ProjectDesc = () => {
         "Argon2"
       ],
       features: [
-        "Simple App for my family members to draw names for Christmas",
-        "Easy to Use, easy to check",
-        "Data is stored in a database"
+        "[Work In Progress]",
+        "App built for Sanitation Department to keep track of bins and customers",
+        "Allows Admins to make changes to locations and bins",
+        "Allows non-admin users to mark bins as picked up",
+        "Allows users to mark a bin's lat and long."
       ],
       benefits: [
-        "Users can draw a random name regardless of their current location",
-        "Never repeats a drawn name as the rows update and are maintained with Supabase",
+        "Department heads can make reports based on data from collections",
+        "Bins are kept track of via actual location, not just street addresses",
+        "Database can be easily searched to find information about the bin or customer"
       ],
       url: "https://github.com/pikkauhn/sanitation/"
     }
