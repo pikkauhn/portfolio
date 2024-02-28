@@ -48,6 +48,15 @@ a:hover {
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
 }
 
+.contentShapeMobile {
+  position: absolute;
+  margin: 15%;
+  width: 70vw;
+  border: 5px solid transparent;
+  animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
+  clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
+}
+
 @keyframes contentShapeExpand {
   0% {
     width: 0vw;
