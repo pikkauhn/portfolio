@@ -28,15 +28,6 @@ a:hover {
   animation: colorPulse 5s infinite ease-in-out;
 }
 
-.menuButtons {
-  border-radius: 0;
-  animation: colorPulse 5s infinite ease-in-out;
-}
-
-.menuButtons:hover {
-  padding: 5%
-}
-
 .buttons:hover {
   background-color: rgba(59, 155, 211, 0.2);
 }
@@ -60,20 +51,11 @@ a:hover {
 .contentShapeMobile {
   position: absolute;
   width: 90vw;
-  height: 80vh;
+  height: 90vh;
   margin: 5%;
   border: 5px solid transparent;
   animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
-}
-
-.menuButton {
-  position: absolute;
-  border-radius: 0;
-  margin-left: 0;
-  margin-top: 50%;
-  animation: colorPulse 5s infinite ease-in-out;
-  z-index: 10;
 }
 
 .pageHeader {
@@ -101,7 +83,7 @@ a:hover {
   margin-top: 1rem;
   margin-left: 4vw;
   margin-right: 4vw;
-  height: 40rem;
+  height: 45rem;
   overflow-y: auto;
 }
 
