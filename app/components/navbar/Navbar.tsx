@@ -10,22 +10,22 @@ import { Button } from 'primereact/button';
 
 
 import './Navbar.css';
-import useWindowWidth from '../useWindowWidth'
+import useResponsiveStrings from '../useResponsiveStrings'
 
 const Navbar = () => {
   const [visible, setVisible] = useState<boolean>(false);
-  const width = useWindowWidth();
+  const { pageContent } = useResponsiveStrings();
   const router = useRouter();
 
   return (
     <>
-      {width < 900 ?
+      {pageContent === 'pageContentMobile' ?
         <>
           <Button className='menuButton' visible={!visible} outlined icon={PrimeIcons.BARS} onClick={() => setVisible(true)} />
           <Sidebar className='sideBar' showCloseIcon={false} visible={visible} onHide={() => setVisible(false)}>
             <div className="grid">
               <span className="ml-1 col">
-                <h2 className='menuHeader ml-0 w-5'>Menu</h2>                
+                <h2 className='menuHeader'>Menu</h2>                
                 <Button outlined className='menuButtons w-10 mb-2' label="About Me" onClick={() => { router.replace('/'); setVisible(false) }} />
                 <Button outlined className='menuButtons w-10 mb-2' label="Projects" onClick={() => { router.replace('/Projects'); setVisible(false) }} />
                 <Button outlined className='menuButtons w-10 mb-2' label="Education" onClick={() => { router.replace('/Education'); setVisible(false) }} />

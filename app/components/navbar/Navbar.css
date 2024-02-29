@@ -37,6 +37,7 @@
 
 .sideBar {
     height: auto;
+    width: 40vw;
     border: 2px solid rgba(17, 166, 252, 1);
     background-color: rgba(28, 74, 100, 0.849);
     border-left: 0;
@@ -45,13 +46,14 @@
 .menuButton {
     position: absolute;
     border-radius: 0;
-    margin-top: 50%;
+    margin-top: 50vh;
     background-color: rgba(28, 74, 100, 0.849);
     z-index: 10;
 }
 
 .menuHeader {
     margin-top: 0;
+    width: 25vw;
     color: rgb(17, 166, 252, 1);    
     border-bottom: 2px solid rgba(17, 166, 252, 1);
 }

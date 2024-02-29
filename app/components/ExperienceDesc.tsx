@@ -78,7 +78,7 @@ const ExperienceDesc = () => {
         }} />
       </div>
       
-      <div className="pageContent lg:h-24rem">
+      <div>
         {projectList.map((data) => {
           return (
             <div key={data.title} >

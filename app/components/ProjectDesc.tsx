@@ -63,7 +63,7 @@ const ProjectDesc = () => {
         "Improved customer experience",
         "Enhanced communication between the business and customers",
         "Brings some services closer to automation",
-        "Saves time and resources from customers and employees"
+        "Saves time and resources for customers and employees"
       ],
       url: "https://www.searcywater.org"
     },
@@ -123,7 +123,8 @@ const ProjectDesc = () => {
           })
         }} />
       </div>
-      <div className="pageContent lg:h-24rem">
+
+      <div>
 
         {projectList.map((data) => {
           return (

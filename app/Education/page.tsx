@@ -1,23 +1,17 @@
 'use client'
-import React from 'react'
 import EducationDesc from '../components/EducationDesc'
-import useWindowWidth from '../components/useWindowWidth'
+import useResponsiveStrings from '../components/useResponsiveStrings'
 
 const page = () => {
-  const width = useWindowWidth();
+  const { contentShape, pageHeader, pageContent } = useResponsiveStrings();
+
+
   return (
-    <div>
-      {width < 900 ?
-        <div className='contentShapeMobile'>
-          <h2 className='pageHeaderMobile'>Education</h2>
-          <EducationDesc />
-        </div>
-        :
-        <div className='contentShape'>
-          <h2 className="pageHeader">Education</h2>
-          <EducationDesc />
-        </div>
-      }
+    <div className={contentShape}>
+      <h2 className={pageHeader}>Education</h2>
+      <div className={pageContent}>
+      <EducationDesc />
+      </div>
     </div>
   )
 }

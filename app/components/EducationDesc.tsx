@@ -21,8 +21,7 @@ const EducationDesc = () => {
 
     return (
 
-        <div className="pageContent lg:h-28rem">
-
+        <div>
             {projectList.map((data) => {
                 return (
                     <div key={data.title} className="projectDescriptions">
