@@ -4,8 +4,7 @@ import useResponsiveStrings from '../components/useResponsiveStrings'
 
 const page = () => {
   const { contentShape, pageHeader, pageContent } = useResponsiveStrings();
-
-
+  
   return (
     <div className={contentShape}>
       <h2 className={pageHeader}>Education</h2>
