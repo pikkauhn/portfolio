@@ -21,7 +21,7 @@ const EducationDesc = () => {
 
     return (
 
-        <div className="pageContent">
+        <div className="pageContent lg:h-28rem md:pageContentMobile">
 
             {projectList.map((data) => {
                 return (

@@ -9,7 +9,7 @@ const page = () => {
     <div>
       {width < 900 ?
         <div className='contentShapeMobile'>
-          <h2 className='pageHeader'>Education</h2>
+          <h2 className='pageHeaderMobile'>Education</h2>
           <EducationDesc />
         </div>
         :

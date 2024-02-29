@@ -10,7 +10,7 @@ const width = useWindowWidth();
     <>
       {width < 900 ?
         <div className='contentShapeMobile'>
-          <h2 className='pageHeader'>Projects</h2>
+          <h2 className='pageHeaderMobile'>Projects</h2>
           <ProjectDesc />
         </div>
         :

@@ -20,15 +20,20 @@ const Navbar = () => {
   return (
     <>
       {width < 900 ?
-      <>
-        <Button outlined icon={PrimeIcons.BARS} onClick={() => setVisible(true)}/>
-        <Sidebar className='sideBar' visible={visible} onHide={() => setVisible(false)}>
-        <Button outlined label="About Me" onClick={() => {router.replace('/')}}/>
-        <Button outlined label="Projects" onClick={() => {router.replace('/Projects')}}/>
-        <Button outlined label="Education" onClick={() => {router.replace('/Education')}}/>
-        <Button outlined label="Experience" onClick={() => {router.replace('/Experience')}}/>
-        </Sidebar>
-</>
+        <>
+          <Button className='menuButton' visible={!visible} outlined icon={PrimeIcons.BARS} onClick={() => setVisible(true)} />
+          <Sidebar className='sideBar' showCloseIcon={false} visible={visible} onHide={() => setVisible(false)}>
+            <div className="grid">
+              <span className="ml-6 col">
+                <h2 className='pageHeader ml-0 w-5'>Menu</h2>                
+                <Button outlined className='fadeinleft animation-duration-500 animation-delay-100 buttons w-10 mb-2' label="About Me" onClick={() => { router.replace('/'); setVisible(false) }} />
+                <Button outlined className='fadeinleft animation-duration-500 animation-delay-200 buttons w-10 mb-2' label="Projects" onClick={() => { router.replace('/Projects'); setVisible(false) }} />
+                <Button outlined className='fadeinleft animation-duration-500 animation-delay-300 buttons w-10 mb-2' label="Education" onClick={() => { router.replace('/Education'); setVisible(false) }} />
+                <Button outlined className='fadeinleft animation-duration-500 animation-delay-400 buttons w-10' label="Experience" onClick={() => { router.replace('/Experience'); setVisible(false) }} />
+              </span>
+            </div>
+          </Sidebar>
+        </>
         :
         <div className="flex flex-row flex-wrap">
           <div className='flex shape mt-3'>

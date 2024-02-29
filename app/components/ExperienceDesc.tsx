@@ -25,9 +25,9 @@ const ExperienceDesc = () => {
       header1: 'Key Achievements:',
       description: [
         "Spearhead IT support for staff, adeptly managing hardware, software, and networking challenges",
-      "Enhance customer satisfaction by addressing website and account-related issues, ensuring a seamless user experience.",
-      "Collaborate with vendors, resolving hardware and software problems, facilitating migrations, and streamlining equipment acquisitions.",
-      "Ensure billing accuracy by managing meter readings and optimizing database operations to produce comprehensive billing and water usage reports for upper management."
+        "Enhance customer satisfaction by addressing website and account-related issues, ensuring a seamless user experience.",
+        "Collaborate with vendors, resolving hardware and software problems, facilitating migrations, and streamlining equipment acquisitions.",
+        "Ensure billing accuracy by managing meter readings and optimizing database operations to produce comprehensive billing and water usage reports for upper management."
       ],
       header2: 'Impactful Contributions:',
       highlights: [
@@ -46,13 +46,13 @@ const ExperienceDesc = () => {
       header1: 'Key Responsibilities',
       description: [
         "Facilitated the onboarding process for new team members by delivering comprehensive training and providing clear and efficient explanations of company protocols.",
-      "Conducted in-depth research on a variety of computer systems and databases to effectively address customer complaints and inquiries, ensuring prompt issue resolution.",
-      "Acted as a liaison between customers and upper management, effectively communicating and referring complex issues while maintaining positive customer relationships.",
-      "Demonstrated strong verbal and negotiation skills in resolving customer complaints and concerns, consistently upholding a courteous and professional demeanor.",
-      "Provided diligent support and adeptly resolved customer problems, ensuring their satisfaction with every interaction.",
-      "Responded promptly and effectively to customer service emails, adhering to established timelines.",
-      "Conducted thorough research, documentation, and escalation of cases to higher levels of support in accordance with internal procedures.",
-      "Achieved promotion to the role of Office Manager in 2015, assuming the primary on-site technician responsibilities for non-contracted clients and serving as the secondary on-site technician for contracted clients."
+        "Conducted in-depth research on a variety of computer systems and databases to effectively address customer complaints and inquiries, ensuring prompt issue resolution.",
+        "Acted as a liaison between customers and upper management, effectively communicating and referring complex issues while maintaining positive customer relationships.",
+        "Demonstrated strong verbal and negotiation skills in resolving customer complaints and concerns, consistently upholding a courteous and professional demeanor.",
+        "Provided diligent support and adeptly resolved customer problems, ensuring their satisfaction with every interaction.",
+        "Responded promptly and effectively to customer service emails, adhering to established timelines.",
+        "Conducted thorough research, documentation, and escalation of cases to higher levels of support in accordance with internal procedures.",
+        "Achieved promotion to the role of Office Manager in 2015, assuming the primary on-site technician responsibilities for non-contracted clients and serving as the secondary on-site technician for contracted clients."
       ],
       header2: '',
       highlights: [],
@@ -77,8 +77,8 @@ const ExperienceDesc = () => {
           })
         }} />
       </div>
-      <div className="pageContent">
-
+      
+      <div className="pageContent lg:h-24rem">
         {projectList.map((data) => {
           return (
             <div key={data.title} >

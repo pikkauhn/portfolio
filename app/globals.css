@@ -28,6 +28,15 @@ a:hover {
   animation: colorPulse 5s infinite ease-in-out;
 }
 
+.menuButtons {
+  border-radius: 0;
+  animation: colorPulse 5s infinite ease-in-out;
+}
+
+.menuButtons:hover {
+  padding: 5%
+}
+
 .buttons:hover {
   background-color: rgba(59, 155, 211, 0.2);
 }
@@ -50,23 +59,21 @@ a:hover {
 
 .contentShapeMobile {
   position: absolute;
-  margin: 15%;
-  width: 70vw;
+  width: 90vw;
+  height: 80vh;
+  margin: 5%;
   border: 5px solid transparent;
   animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
 }
 
-@keyframes contentShapeExpand {
-  0% {
-    width: 0vw;
-    height: 0vh;
-  }
-
-  100% {
-    width: 70vw;
-    height: 60vh;
-  }
+.menuButton {
+  position: absolute;
+  border-radius: 0;
+  margin-left: 0;
+  margin-top: 50%;
+  animation: colorPulse 5s infinite ease-in-out;
+  z-index: 10;
 }
 
 .pageHeader {
@@ -77,15 +84,24 @@ a:hover {
   animation: colorPulse 5s infinite ease-in-out;
 }
 
+.pageHeaderMobile {
+  margin-top: 1.2rem;
+  margin-left: 4rem;
+  width: 40vw;
+  border-bottom: 2px solid transparent;
+  animation: colorPulse 5s infinite ease-in-out;
+}
+
 .projectSelection {
   margin-left: 4vw;
 }
 
 .pageContent {
   padding-right: 3vw;
+  margin-top: 1rem;
   margin-left: 4vw;
   margin-right: 4vw;
-  height: 42vh;
+  height: 40rem;
   overflow-y: auto;
 }
 
@@ -132,7 +148,8 @@ p:last-child:after {
   content: "_";
 }
 
-/* Keyframes for the animation */
+/* Animations */
+
 @keyframes scrollPulse {
 
   0%,
@@ -238,5 +255,17 @@ p:last-child:after {
   50% {
     background-color: rgba(10, 75, 119, 0);
     background-position: 50% 50%;
+  }
+}
+
+@keyframes contentShapeExpand {
+  0% {
+    width: 0vw;
+    height: 0vh;
+  }
+
+  100% {
+    width: 70vw;
+    height: 60vh;
   }
 }

@@ -123,7 +123,7 @@ const ProjectDesc = () => {
           })
         }} />
       </div>
-      <div className="pageContent">
+      <div className="pageContent lg:h-24rem">
 
         {projectList.map((data) => {
           return (
