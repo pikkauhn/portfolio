@@ -39,7 +39,7 @@ const ProjectDesc = () => {
         "Streamlined processes for managers",
         "Saving time and resources"
       ],
-      url: "https://swu-vacalendar.onrender.com"
+      url: "https://vacalendar.onrender.com"
     },
     {
       visible: false,
@@ -153,6 +153,9 @@ const ProjectDesc = () => {
                     </ul>
                     <h3>URL:</h3>
                     <ul>
+                      {data.name === 'project1' ? 
+                      <a href='/vacalendar.readme.pdf' target="_blank">VaCalendar Readme</a>
+                      : null}
                       <a href={data.url} target="_blank">{data.url}</a>
                     </ul>
                   </>)}
