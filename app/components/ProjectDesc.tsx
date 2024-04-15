@@ -92,6 +92,30 @@ const ProjectDesc = () => {
         "Database can be easily searched to find information about the bin or customer"
       ],
       url: "https://github.com/pikkauhn/sanitation/"
+    },
+    {
+      visible: false,
+      title: "Timesuck Podcast Episode App",
+      name: "project4",
+      technologies: [
+        "Typescript",
+        "Next.js14 with App Router",
+        "Supabase Database Connection",
+        "Prime React with Prime Flex",
+        "Next-Auth",
+        "Argon2",        
+      ],
+      features: [
+        "[Work In Progress]",
+        "App built to keep track of Timesuck podcast episodes for the listeners",
+        "Uses AI to generate categories based on episode descriptions [WIP]",
+        "Allows users to select episodes for viewing"
+      ],
+      benefits: [
+        "One location to easily view and select each episode",
+        "Database can be easily searched for specific titles or filtered by category"
+      ],
+      url: "https://timesuck.onrender.com"
     }
   ]
 
@@ -103,7 +127,8 @@ const ProjectDesc = () => {
             ...visibleProjects,
             project1: !visibleProjects.project1,
             project2: false,
-            project3: false
+            project3: false,
+            project4: false,
           })
         }} />
         <Button className='buttons' outlined label='SWU Website' onClick={() => {
@@ -111,13 +136,24 @@ const ProjectDesc = () => {
             ...visibleProjects,
             project2: !visibleProjects.project2,
             project1: false,
-            project3: false
+            project3: false,
+            project4: false,
           })
         }} />
         <Button className='buttons' outlined label='Sanitation App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project3: !visibleProjects.project3,
+            project3: !visibleProjects.project3,            
+            project2: false,
+            project1: false,
+            project4: false,
+          })
+        }} />
+        <Button className='buttons' outlined label='Timesuck Podcast App' onClick={() => {
+          setVisibleProjects({
+            ...visibleProjects,
+            project4: !visibleProjects.project4,
+            project3: false,
             project2: false,
             project1: false
           })
