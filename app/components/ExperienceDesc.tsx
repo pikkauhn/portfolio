@@ -20,7 +20,7 @@ const ExperienceDesc = () => {
     {
       visible: false,
       name: 'exp1',
-      title: "IT Coordinator",
+      title: "Web Developer / IT Coordinator",
       workplace: "Searcy Water Utilities",
       header1: 'Key Achievements:',
       description: [
@@ -62,7 +62,7 @@ const ExperienceDesc = () => {
   return (
     <div>
       <div className="projectSelection">
-        <Button className='buttons' outlined label='IT Coordinator' onClick={() => {
+        <Button className='buttons' outlined label='Web Developer' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
             exp1: !visibleProjects.exp1,
