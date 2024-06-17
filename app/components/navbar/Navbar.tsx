@@ -47,8 +47,8 @@ const Navbar = () => {
               <a href="/Projects">Projects</a>
               <a href="/Education">Education</a>
               <a href="/Experience">Experience</a>
-              <a href="https://github.com/pikkauhn" target="_blank"><i className='pi pi-github' /></a>
-              <a href="https://www.linkedin.com/in/zachary-a-burns/" target="_blank"><i className='pi pi-linkedin' /></a>
+              <a href="https://github.com/pikkauhn" target="_blank">Github</a>
+              <a href="https://www.linkedin.com/in/zachary-a-burns/" target="_blank">LinkedIn</a>
             </div>
           </div>
         </div>
