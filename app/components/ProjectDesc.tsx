@@ -160,11 +160,11 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='Vacalendar' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project1: !visibleProjects.project2,
-            project2: false,
+            project2: !visibleProjects.project2,
             project3: false,
             project4: false,
             project5: false,
+            project1: false,
           })
         }} />
         <Button className='buttons' outlined label='SWU Website' onClick={() => {
