@@ -160,7 +160,7 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='Vacalendar' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project1: !visibleProjects.project1,
+            project1: !visibleProjects.project2,
             project2: false,
             project3: false,
             project4: false,
@@ -170,7 +170,7 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='SWU Website' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project2: !visibleProjects.project2,
+            project2: !visibleProjects.project3,
             project1: false,
             project3: false,
             project4: false,
@@ -180,7 +180,7 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='Sanitation App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project3: !visibleProjects.project3,            
+            project3: !visibleProjects.project4,            
             project2: false,
             project1: false,
             project4: false,
@@ -190,7 +190,7 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='Timesuck Podcast App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project4: !visibleProjects.project4,
+            project4: !visibleProjects.project5,
             project5: false,
             project3: false,
             project2: false,
@@ -228,7 +228,7 @@ const ProjectDesc = () => {
                     </ul>
                     <h3>URL:</h3>
                     <ul>
-                      {data.name === 'project1' ? 
+                      {data.name === 'project2' ? 
                       <a href='/vacalendar.readme.pdf' target="_blank">VaCalendar Readme</a>
                       : null}
                       <a href={data.url} target="_blank">{data.url}</a>
