@@ -18,8 +18,33 @@ const ProjectDesc = () => {
   const projectList: Description[] = [
     {
       visible: false,
-      title: "Time Off Management System",
+      title: "[WIP] Leave Calendar",
       name: "project1",
+      technologies: [
+        ".NET C# Backend",        
+        "Amazon Web Services Relational Database with MySQL",
+        "Next.ts with App Router Frontend",        
+        "Prime React with Prime Flex"
+      ],
+      features: [
+        "Streamlined time off requests and approvals",
+        "Simplified leave management for managers",
+        "Real-time request tracking",
+        "Centralized dashboard",
+        "Automatic notifications"
+      ],
+      benefits: [
+        "Improved employee morale and satisfaction",
+        "Enhanced transparency and communication",
+        "Streamlined processes for managers",
+        "Saving time and resources"
+      ],
+      url: "https://github.com/pikkauhn/leavecalendar"
+    },
+    {      
+      visible: false,
+      title: "Time Off Management System",
+      name: "project2",
       technologies: [
         "TypeScript",
         "Next.js13 with App Router",
@@ -44,7 +69,7 @@ const ProjectDesc = () => {
     {
       visible: false,
       title: "Searcy Water Utilities Website",
-      name: "project2",
+      name: "project3",
       technologies: [
         "JavaScript",
         "CRA - Create React App",
@@ -70,7 +95,7 @@ const ProjectDesc = () => {
     {
       visible: false,
       title: "Sanitation Bin Tracking App",
-      name: "project3",
+      name: "project4",
       technologies: [
         "Typescript",
         "Next.js14 with App Router",
@@ -96,7 +121,7 @@ const ProjectDesc = () => {
     {
       visible: false,
       title: "Timesuck Podcast Episode App",
-      name: "project4",
+      name: "project5",
       technologies: [
         "Typescript",
         "Next.js14 with App Router",
@@ -122,6 +147,16 @@ const ProjectDesc = () => {
   return (
     <div>
       <div className="projectSelection">
+      <Button className='buttons' outlined label='LeaveCalendar' onClick={() => {
+          setVisibleProjects({
+            ...visibleProjects,
+            project1: !visibleProjects.project1,
+            project2: false,
+            project3: false,
+            project4: false,
+            project5: false,
+          })
+        }} />
         <Button className='buttons' outlined label='Vacalendar' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
@@ -129,6 +164,7 @@ const ProjectDesc = () => {
             project2: false,
             project3: false,
             project4: false,
+            project5: false,
           })
         }} />
         <Button className='buttons' outlined label='SWU Website' onClick={() => {
@@ -138,6 +174,7 @@ const ProjectDesc = () => {
             project1: false,
             project3: false,
             project4: false,
+            project5: false,
           })
         }} />
         <Button className='buttons' outlined label='Sanitation App' onClick={() => {
@@ -147,12 +184,14 @@ const ProjectDesc = () => {
             project2: false,
             project1: false,
             project4: false,
+            project5: false,
           })
         }} />
         <Button className='buttons' outlined label='Timesuck Podcast App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
             project4: !visibleProjects.project4,
+            project5: false,
             project3: false,
             project2: false,
             project1: false
