@@ -170,9 +170,9 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='SWU Website' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project2: !visibleProjects.project3,
+            project3: !visibleProjects.project3,
             project1: false,
-            project3: false,
+            project2: false,
             project4: false,
             project5: false,
           })
@@ -180,18 +180,18 @@ const ProjectDesc = () => {
         <Button className='buttons' outlined label='Sanitation App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project3: !visibleProjects.project4,            
+            project4: !visibleProjects.project4,            
             project2: false,
             project1: false,
-            project4: false,
+            project3: false,
             project5: false,
           })
         }} />
         <Button className='buttons' outlined label='Timesuck Podcast App' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            project4: !visibleProjects.project5,
-            project5: false,
+            project5: !visibleProjects.project5,
+            project4: false,
             project3: false,
             project2: false,
             project1: false
