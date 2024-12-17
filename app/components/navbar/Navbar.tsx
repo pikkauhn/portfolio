@@ -26,7 +26,8 @@ const Navbar = () => {
                 <Button outlined className='menuButtons w-10 mb-2' label="About Me" onClick={() => { router.replace('/'); setVisible(false) }} />
                 <Button outlined className='menuButtons w-10 mb-2' label="Projects" onClick={() => { router.replace('/Projects'); setVisible(false) }} />
                 <Button outlined className='menuButtons w-10 mb-2' label="Education" onClick={() => { router.replace('/Education'); setVisible(false) }} />
-                <Button outlined className='menuButtons w-10' label="Experience" onClick={() => { router.replace('/Experience'); setVisible(false) }} />
+                <Button outlined className='menuButtons w-10 mb-2' label="Experience" onClick={() => { router.replace('/Experience'); setVisible(false) }} />
+                <Button outlined className='menuButtons w-10' label="Resume" onClick={() => { router.replace('/BurnsResume.pdf'); setVisible(false) }} />
               </span>
               <span className='ml-1'>
                 <Button outlined className='menuButtons mr-2 ml-6' onClick={() => { window.open("https://github.com/pikkauhn", '_blank') }} icon='pi pi-github' />
@@ -37,7 +38,7 @@ const Navbar = () => {
         </>
         :
         <div className="flex flex-row flex-wrap">
-          <div className='flex shape mt-3'>
+          <div className='flex shape mt-3'>f
             <Image className="profile" alt='Profile Picture' src={me} />
 
           </div>
@@ -49,6 +50,7 @@ const Navbar = () => {
               <a href="/Experience">Experience</a>
               <a href="https://github.com/pikkauhn" target="_blank">Github</a>
               <a href="https://www.linkedin.com/in/zachary-a-burns/" target="_blank">LinkedIn</a>
+              <a href='/BurnsResume.pdf' target="_blank">Resume</a>
             </div>
           </div>
         </div>
