@@ -1,8 +1,10 @@
 'use client'
-import useResponsiveStrings from "./components/useResponsiveStrings"
+import { Button } from "primereact/button";
+import useResponsiveStrings from "./components/useResponsiveStrings";
 
 export default function Home() {
-  const {contentShape, pageHeader, pageContent} = useResponsiveStrings();
+  const {contentShape, pageHeader, pageContent} = useResponsiveStrings();  
+  const pdfUrl = './assets/Burns Resume Printable.pdf';
   return (
     <main>
         <div className={contentShape}>
@@ -12,6 +14,9 @@ export default function Home() {
             Beyond technical prowess, I value collaboration and believe in the power of shared knowledge. My ambition lies in leveraging my experience and eagerness to learn to eventually lead a team of talented developers, fostering an environment where individual growth fuels collective success.<br /><br />
             This isn't just a portfolio; it's an invitation to explore an ongoing journey of professional development and a collaborative spirit committed to building efficient, user-centric solutions. I believe that together, we can write code that sings, not just functions.
           </p>
+          <a href={pdfUrl} download="Burns Resume.pdf">            
+          <Button label="Download Resume" />
+          </a>
         </div>
     </main>
   )
