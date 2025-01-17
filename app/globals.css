@@ -3,12 +3,12 @@ body {
 }
 
 html {
-  font-size: 16px;  
+  font-size: 16px;
 }
 
-a {  
+a {
   margin-left: 1rem;
-  padding: 1.25rem;  
+  padding: 1.25rem;
   text-decoration: none;
   cursor: pointer;
   color: inherit;
@@ -25,7 +25,7 @@ a:hover {
 .buttons {
   margin-right: 20px;
   border-radius: 0;
-  animation: colorPulse 5s infinite ease-in-out;
+  animation: colorPulse 9.5s ease-in;
 }
 
 .buttons:hover {
@@ -44,7 +44,8 @@ a:hover {
   height: 60vh;
   width: 70vw;
   border: 5px solid transparent;
-  animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
+  border-color: rgba(17, 166, 252, 1);
+  animation: colorPulse 9.5s ease-in, contentShapeExpand 1s ease-out 0s 1;
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
 }
 
@@ -54,7 +55,8 @@ a:hover {
   height: 90vh;
   margin: 5%;
   border: 5px solid transparent;
-  animation: colorPulse 5s infinite ease-in-out, contentShapeExpand 1s ease-out 0s 1;
+  border-color: rgba(17, 166, 252, 1);
+  animation: colorPulse 9.5s ease-in, contentShapeExpand 1s ease-out 0s 1;
   clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 15%);
 }
 
@@ -63,7 +65,8 @@ a:hover {
   margin-left: 4rem;
   width: 10vw;
   border-bottom: 2px solid transparent;
-  animation: colorPulse 5s infinite ease-in-out;
+  border-color: rgba(17, 166, 252, 1);
+  animation: colorPulse 9.5s ease-in;
 }
 
 .pageHeaderMobile {
@@ -71,7 +74,8 @@ a:hover {
   margin-left: 4rem;
   width: 40vw;
   border-bottom: 2px solid transparent;
-  animation: colorPulse 5s infinite ease-in-out;
+  border-color: rgba(17, 166, 252, 1);
+  animation: colorPulse 9.5s ease-in;
 }
 
 .projectSelection {
@@ -107,16 +111,27 @@ a:hover {
   border: 1px solid;
 }
 
+.pageContentMobile::-webkit-scrollbar {
+  margin-left: 5vw;
+  width: 10px;
+  border: 1px solid;
+}
+
+.pageContentMobile::-webkit-scrollbar-thumb {
+  width: 1px;
+  border: 1px solid;
+}
 
 .screen {
   background-size: cover;
   background-image: radial-gradient(#444, #111);
   background-position: center;
   min-height: 100vh;
-  animation: colorPulse 5s infinite ease-in-out;
+  color: rgb(17, 166, 252, 1);
+  animation: colorPulse 9.5s ease-in;
   box-shadow: 0 0 5vmin 1vmin #000 inset;
   box-sizing: border-box;
-  font-family: 'Fira Mono', monospace;
+  font-family: "Fira Mono", monospace;
   font-size: 1.25rem;
   overflow: hidden;
 }
@@ -142,7 +157,6 @@ p:last-child:after {
 /* Animations */
 
 @keyframes scrollPulse {
-
   0%,
   100% {
     background-color: rgb(17, 166, 252, 1);
@@ -150,17 +164,15 @@ p:last-child:after {
 
   48%,
   52% {
-    background-color: rgba(17, 166, 252, .5);
+    background-color: rgba(17, 166, 252, 0.5);
   }
 
   50% {
-    background-color: rgba(17, 166, 252, .1);
+    background-color: rgba(17, 166, 252, 0.1);
   }
 }
 
-
 @keyframes colorPulse {
-
   0%,
   100% {
     color: rgb(17, 166, 252, 1);
@@ -169,15 +181,15 @@ p:last-child:after {
 
   48%,
   52% {
-    color: rgba(17, 166, 252, .5);
-    border-color: rgba(17, 166, 252, .5);
+    color: rgba(17, 166, 252, 0.5);
+    border-color: rgba(17, 166, 252, 0.5);
   }
 
   50% {
-    color: rgba(17, 166, 252, .1);
-    border-color: rgba(17, 166, 252, .1);
+    color: rgba(17, 166, 252, 0.1);
+    border-color: rgba(17, 166, 252, 0.1);
 
-    scrollbar-color: rgba(17, 166, 252, .1);
+    scrollbar-color: rgba(17, 166, 252, 0.1);
   }
 }
 
@@ -196,7 +208,6 @@ p:last-child:after {
   10% {
     opacity: 0;
     filter: hue-rotate(170deg) brightness(50%) contrast(105%);
-
   }
 
   30% {
@@ -206,7 +217,6 @@ p:last-child:after {
   48% {
     opacity: 0;
     filter: hue-rotate(170deg) brightness(50%) contrast(105%);
-
   }
 
   52% {
@@ -220,17 +230,16 @@ p:last-child:after {
 
   70% {
     opacity: 100;
-    filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
   }
 
   100% {
     opacity: 0;
-    filter: hue-rotate(170deg) brightness(50%) contrast(105%);    
+    filter: hue-rotate(170deg) brightness(50%) contrast(105%);
   }
 }
 
 @keyframes bgPulse {
-
   0%,
   100% {
     background-color: rgba(59, 155, 211, 0.2);

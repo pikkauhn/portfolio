@@ -38,9 +38,8 @@ const Navbar = () => {
         </>
         :
         <div className="flex flex-row flex-wrap">
-          <div className='flex shape mt-3'>f
+          <div className='flex shape mt-3'>
             <Image className="profile" alt='Profile Picture' src={me} />
-
           </div>
           <div className='navBar flex mt-6'>
             <div className="linkies">
