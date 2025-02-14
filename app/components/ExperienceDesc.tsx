@@ -88,18 +88,40 @@ const ExperienceDesc = () => {
   return (
     <div>
       <div className="projectSelection">
-        <Button className='buttons' outlined label='Web Developer' onClick={() => {
+        <Button className='buttons' outlined label='Fullstack Engineer' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
             exp1: !visibleProjects.exp1,
-            exp2: false
+            exp2: false,
+            exp3: false,
+            exp4: false,
+          })
+        }} />
+        <Button className='buttons' outlined label='Technical Writer' onClick={() => {
+          setVisibleProjects({
+            ...visibleProjects,
+            exp2: !visibleProjects.exp2,
+            exp1: false,
+            exp3: false,
+            exp4: false,
+          })
+        }} />
+        <Button className='buttons' outlined label='Technical Support' onClick={() => {
+          setVisibleProjects({
+            ...visibleProjects,
+            exp3: !visibleProjects.exp3,
+            exp1: false,
+            exp2: false,
+            exp4: false,
           })
         }} />
         <Button className='buttons' outlined label='IT Manager' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
-            exp2: !visibleProjects.exp2,
+            exp4: !visibleProjects.exp4,
             exp1: false,
+            exp2: false,
+            exp3: false,
           })
         }} />
       </div>
