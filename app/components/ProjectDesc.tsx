@@ -17,7 +17,7 @@ const ProjectDesc = () => {
 
   const projectList: Description[] = [
     {
-      visible: false,
+      visible: true,
       title: "[WIP] Leave Calendar",
       name: "project1",
       technologies: [

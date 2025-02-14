@@ -18,7 +18,7 @@ const ExperienceDesc = () => {
 
   const projectList: Description[] = [
     {
-      visible: false,
+      visible: true,
       name: 'exp1',
       title: "Fullstack Software Engineer",
       workplace: "Searcy Water Utilities",
