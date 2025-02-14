@@ -17,7 +17,7 @@ const ProjectDesc = () => {
 
   const projectList: Description[] = [
     {
-      visible: true,
+      visible: false,
       title: "[WIP] Leave Calendar",
       name: "project1",
       technologies: [
@@ -203,7 +203,7 @@ const ProjectDesc = () => {
 
         {projectList.map((data) => {
           return (
-            <div key={data.title} >
+            <div key={data.title}>
               <div className="projectDescriptions">
                 {visibleProjects[data.name] && (
                   <>
