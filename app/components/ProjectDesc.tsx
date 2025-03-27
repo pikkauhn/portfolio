@@ -18,28 +18,24 @@ const ProjectDesc = () => {
   const projectList: Description[] = [
     {
       visible: false,
-      title: "[WIP] Leave Calendar",
+      title: "MeterChangeApi",
       name: "project1",
       technologies: [
         ".NET C# Backend",        
-        "Amazon Web Services Relational Database with MySQL",
-        "Next.ts with App Router Frontend",        
-        "Prime React with Prime Flex"
+        "Microsoft Entity Core Framework",
+        "MySQL",
+        "JwT"        
       ],
       features: [
-        "Streamlined time off requests and approvals",
-        "Simplified leave management for managers",
-        "Real-time request tracking",
-        "Centralized dashboard",
-        "Automatic notifications"
+        "Api for MeterChange project in development",
+        "Connects to local MySQL DB"
       ],
       benefits: [
-        "Improved employee morale and satisfaction",
-        "Enhanced transparency and communication",
-        "Streamlined processes for managers",
-        "Saving time and resources"
+        "Full project will allow users to make changes to meter and location data while in field,"
+        + "/n reducing the chance for human error and cutting redundancy by 400%",
+        "Will streamline meter changing process for users"        
       ],
-      url: "https://github.com/pikkauhn/leavecalendar"
+      url: "https://github.com/pikkauhn/MeterChangeAPI"
     },
     {      
       visible: false,
@@ -64,7 +60,7 @@ const ProjectDesc = () => {
         "Streamlined processes for managers",
         "Saving time and resources"
       ],
-      url: "https://vacalendar.onrender.com"
+      url: "https://github.com/pikkauhn/vacalendar"
     },
     {
       visible: false,
@@ -105,7 +101,6 @@ const ProjectDesc = () => {
         "Argon2"
       ],
       features: [
-        "[Work In Progress]",
         "App built for Sanitation Department to keep track of bins and customers",
         "Allows Admins to make changes to locations and bins",
         "Allows non-admin users to mark bins as picked up",
@@ -131,23 +126,22 @@ const ProjectDesc = () => {
         "Argon2",        
       ],
       features: [
-        "[Work In Progress]",
         "App built to keep track of Timesuck podcast episodes for the listeners",
-        "Uses AI to generate categories based on episode descriptions [WIP]",
+        "Uses AI to generate categories based on episode descriptions",
         "Allows users to select episodes for viewing"
       ],
       benefits: [
         "One location to easily view and select each episode",
         "Database can be easily searched for specific titles or filtered by category"
       ],
-      url: "https://timesuck.onrender.com"
+      url: "https://github.com/pikkauhn/timesuck"
     }
   ]
 
   return (
     <div>
       <div className="projectSelection">
-      <Button className='buttons' outlined label='LeaveCalendar' onClick={() => {
+      <Button className='buttons' outlined label='MeterChangeApi' onClick={() => {
           setVisibleProjects({
             ...visibleProjects,
             project1: !visibleProjects.project1,
